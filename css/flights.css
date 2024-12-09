@@ -18,7 +18,7 @@
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background-image: url("/Photos/flybanner.jpg");
+    background-image: url("Photos/flybanner.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: 0 -150px;
