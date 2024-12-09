@@ -1,0 +1,132 @@
+body{
+    padding-top: 100px;
+}
+.text{
+    display: flex;
+    flex-direction: row;
+    width:71%;
+    justify-content: space-between;
+    color: #112D4E;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: #FBCB0A;
+
+}
+.inputs{
+    padding-top: 0px;
+    width: 50%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+input{
+    width: 550px;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: none;
+    box-shadow: rgb(194, 194, 194) 0px 3px 16px 0px;
+    margin-bottom: 5%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+textarea{
+    width: 550px;
+    margin-bottom: 5%;
+    padding-left: 10px;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgb(194, 194, 194) 0px 3px 16px 0px;
+    align-self: center;
+}
+.buton{
+    width: 505px;
+    height: 70px;
+    background-color: #112D4E;
+    color: #FBCB0A;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: 0px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 65px;
+    align-self: center;
+}
+
+#heading{
+    color: #112D4E;
+    font-size: 45px;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: #FBCB0A;
+    align-self: flex-start;
+}
+.cont{
+    position: relative;
+    bottom: 30px;
+    right: 100px;
+}
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.map{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#map-img{
+    width: 100%;
+    max-height: 500px;
+}
+
+@media only screen and (max-width:700px){
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    section{
+        max-width: 700px;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+    }
+    .map{
+        max-width: 700px;
+        min-height: 400px;
+    }
+    #map-img{
+        min-width: 500px;
+        min-height: 300px;
+    }
+    .inputs{
+        max-width: 700px;
+        margin: 0px;
+        padding: 0px;
+        min-height: 500px;
+        position: relative;
+        left: 250px;
+    }
+    .head-tekst{
+        margin: 0px;
+        position: relative;
+        right: 350px;
+        top: 0px;
+    }
+    .cont{
+        top:0px;
+        right: 0px;
+    }
+    .lang{
+        min-width: 220px;
+    }
+}

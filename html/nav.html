@@ -1,0 +1,216 @@
+<nav class="navbar fixed-top navbar-transparent" id="nav">
+
+    <a class="navbar-brand icon" id="logotext" href="home.html">
+    <img src="/Photos/logo2.png" width="50" height="50" class="d-inline-block align-top" alt="">
+    Prishtina Airport
+    </a>
+    <label for="toggle" id="resp">&#9776</label>
+    <input type="checkbox" name="" id="toggle">
+    <div class="links">
+        <a href="home.html" id="a">Homepage</a>
+        <a href="flights.html" id="a">Flights</a>
+        <a href="services.html" id="a">Services</a>
+        <a href="rules.html" id="a">Rules</a>
+        <a href="about.html" id="a">About</a>
+        <a href="contact.html" id="a">Contact/Map</a>
+    </div>
+</nav>
+
+<style>
+ 
+
+
+    #logotext{
+    font-size: 30px;
+    font-weight: bold;
+    color: #FBCB0A;
+    }
+    #resp{
+        display: none;
+    }
+    .icon{
+        margin-left: 150px;
+    }
+
+    @keyframes in {
+        0% {background-color:none; color:#FBCB0A;}
+        100% {background-color:white; color:#112D4E;}
+    }
+    @keyframes out {
+        0% {background-color:white; color: #112D4E;}
+        100% {background-color:none; color: #FBCB0A;}
+    }
+    .shtojca{
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        display: none;
+        
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        margin-bottom: 70px;
+        animation-name: out;
+        animation-duration: 0.5s;
+        
+    }
+    .bgColor{
+        box-shadow: 5px 1px 10px gray;
+        animation: in;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        color: #112D4E;
+    }
+    .bgLink{
+        color: #112D4E;
+    }
+    .navbar:hover .shtojca{
+        float: inline-start;
+    }
+    .navbar:hover{
+        animation-name: in;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .navbar:hover #resp{
+        color: #112D4E;
+    }
+    .navbar:hover #a{
+        color: #112D4E;
+    }
+    .navbar:hover #logotext{
+        color: #112D4E;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 600px;
+        text-decoration: none;
+        margin-right: 150px;
+    }
+    #a{
+        text-decoration: none;
+        color: #FBCB0A;
+        font-weight: bolder;
+    }
+    .a2{
+        text-decoration: none;
+        color:#112D4E;
+        font-weight: bolder;
+    }
+
+    #resp{
+        font-size: 25px;
+        line-height: 70px;
+        display: none;
+        margin-right: 20px;
+    }
+    #toggle{
+        width: 50px;
+        height: 50px;
+        display: none;
+        
+    }
+
+    @media only screen and (max-width:700px){
+        label{
+            display: block;
+            cursor: pointer;
+        }
+        .links{
+            width: 50%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            flex-direction: column;
+            display: none;
+            justify-content: center;
+            background-color: #F9F7F7;
+            color: #112D4E;
+            position: relative;
+            right: -320px;
+        }
+        .links:hover #a{
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+            text-decoration-color:#FBCB0A
+        }
+        .links a{
+            border: 1px #112D4E solid;
+            padding: 10px;
+            margin: 0px;
+        }
+        #toggle:checked + .links{
+            display: flex; 
+        }
+        #toggle:checked + .navbar:hover{
+            animation: none;
+        }
+
+
+        #nav{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+        #logotext{
+            padding: 0px;
+            margin: 0px;
+            color: #FBCB0A;
+        }
+        #resp{
+            display: block;
+            font-size: 25px;
+            color: #FBCB0A;
+        }
+        .hd-f{
+            font-size: 20px !important;
+            margin-bottom: -20px;
+            line-height: 10px;
+        }
+        .bardh{
+            line-height: 15px;
+        }
+        .hd-s{
+            font-size: 50px !important;
+            line-height: 45px; 
+        }
+        .img1{
+            background-size: 100%;
+            padding-top: 80px;
+        }
+    }
+</style>
+
+<script>
+        function changeBg(){
+        var navbar = document.getElementById("nav");
+        let att = document.querySelectorAll("#a")
+        let navText = document.querySelector("#logotext")
+        var links = document.querySelector(".links")
+        var scrollValue = window.scrollY;
+        if(scrollValue < 10){
+            navbar.classList.remove("bgColor")
+            links.classList.remove("bgLink")
+            navText.style.color = "#FBCB0A"
+            for(const x of att){
+                x.style.color = "#FBCB0A"
+            }
+        }else{
+            navbar.classList.add("bgColor")
+            links.classList.add("bgLink")
+            navText.style.color = "#112D4E"
+            for(const x of att){
+                x.style.color = "#112D4E"
+            }
+        }
+    }
+
+    window.addEventListener("scroll", changeBg);
+</script>
