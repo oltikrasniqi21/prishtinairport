@@ -14,7 +14,7 @@ section{
     background-color: #F9F7F7;
 }
 .img1{
-    background-image: url("/Photos/cover.jpg");
+    background-image: url("prishtinairport/Photos/cover.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: 0 -100px;
@@ -91,7 +91,7 @@ section{
     justify-content:space-between;
 }
 .cvbox{
-    background-image: url("/Photos/covid.jpg");
+    background-image: url("prishtinairport/Photos/covid.jpg");
     background-repeat: no-repeat;
     background-blend-mode:lighten;
     background-position: -400px -20px;
